@@ -23,7 +23,6 @@ namespace ConsoleAppPkiVpnH2
             char[] charArrayText = ursText.ToCharArray();
             char[] charArrayKey = ursKey.ToCharArray();
 
-            //int[,] buildArray = new int[charArrayText.Length,2];
             int[] buildArray = new int[charArrayText.Length];
 
             Queue<int> text = new Queue<int>();
