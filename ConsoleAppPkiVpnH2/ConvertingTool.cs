@@ -18,17 +18,24 @@ namespace ConsoleAppPkiVpnH2
 
         public void ConvertTextToNumbs(char[] collection, Queue<int> queueName)
         {
+            int i = 0;
             foreach (char item in collection)
             {
                 switch (item)
                 {
                     case 'a':
+                        //test[i] = 0;
+                        //i++;
                         queueName.Enqueue(0);
                         break;
                     case 'b':
+                        //test[i] = 1;
+                        //i++;
                         queueName.Enqueue(1);
                         break;
                     case 'c':
+                        //test[i] = 2;
+                        //i++;
                         queueName.Enqueue(2);
                         break;
                     case 'd':
