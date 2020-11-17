@@ -8,34 +8,19 @@ namespace ConsoleAppPkiVpnH2
 {
     class ConvertingTool
     {
-        //public Queue<int> text = new Queue<int>();
-        //public Queue<int> Key = new Queue<int>();
-        //public int GetNumberLenght()
-        //{
-        //    int numL = numbers.Count();
-        //    return numL;
-        //}
-
         public void ConvertTextToNumbs(char[] collection, Queue<int> queueName)
         {
-            int i = 0;
             foreach (char item in collection)
             {
                 switch (item)
                 {
                     case 'a':
-                        //test[i] = 0;
-                        //i++;
                         queueName.Enqueue(0);
                         break;
                     case 'b':
-                        //test[i] = 1;
-                        //i++;
                         queueName.Enqueue(1);
                         break;
                     case 'c':
-                        //test[i] = 2;
-                        //i++;
                         queueName.Enqueue(2);
                         break;
                     case 'd':
@@ -59,50 +44,53 @@ namespace ConsoleAppPkiVpnH2
                     case 'j':
                         queueName.Enqueue(9);
                         break;
-                    case 'l':
+                    case 'k':
                         queueName.Enqueue(10);
                         break;
-                    case 'm':
+                    case 'l':
                         queueName.Enqueue(11);
                         break;
-                    case 'n':
+                    case 'm':
                         queueName.Enqueue(12);
                         break;
-                    case 'o':
+                    case 'n':
                         queueName.Enqueue(13);
                         break;
-                    case 'p':
+                    case 'o':
                         queueName.Enqueue(14);
                         break;
-                    case 'q':
+                    case 'p':
                         queueName.Enqueue(15);
                         break;
-                    case 'r':
+                    case 'q':
                         queueName.Enqueue(16);
                         break;
-                    case 's':
+                    case 'r':
                         queueName.Enqueue(17);
                         break;
-                    case 't':
+                    case 's':
                         queueName.Enqueue(18);
                         break;
-                    case 'u':
+                    case 't':
                         queueName.Enqueue(19);
                         break;
-                    case 'v':
+                    case 'u':
                         queueName.Enqueue(20);
                         break;
-                    case 'w':
+                    case 'v':
                         queueName.Enqueue(21);
                         break;
-                    case 'x':
+                    case 'w':
                         queueName.Enqueue(22);
                         break;
-                    case 'y':
+                    case 'x':
                         queueName.Enqueue(23);
                         break;
-                    case 'z':
+                    case 'y':
                         queueName.Enqueue(24);
+                        break;
+                    case 'z':
+                        queueName.Enqueue(25);
                         break;
 
                     default:

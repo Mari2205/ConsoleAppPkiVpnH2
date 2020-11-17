@@ -18,46 +18,67 @@ namespace ConsoleAppPkiVpnH2
             string ursText = Console.ReadLine();
             Console.Write("enter you´re Key: ");
             string ursKey = Console.ReadLine();
+            string newKey = ursKey;
 
+            for (int i = 0; i < ursText.Length; i++)
+            {
+                newKey += newKey;
+            }
 
             char[] charArrayText = ursText.ToCharArray();
-            char[] charArrayKey = ursKey.ToCharArray();
+            char[] charArrayKey = newKey.ToCharArray();
 
             int[] buildArray = new int[charArrayText.Length];
 
             Queue<int> text = new Queue<int>();
             Queue<int> key = new Queue<int>();
 
-
             convert.ConvertTextToNumbs(charArrayKey, key);
             convert.ConvertTextToNumbs(charArrayText, text);
-
-            Console.WriteLine("The numbers for the encryption:");
-            Console.WriteLine ("==================== ");
-            Console.Write("Text) ");
-            foreach (var item in text)
-            {
-                Console.Write(item + " ");
-            }
-
-            Console.Write("\nKey) ");
-            foreach (var item in key)
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine("\n====================");
-
 
             int[] arrText = text.ToArray();
             int[] arrKey = key.ToArray();
 
+            Console.WriteLine("\nEncryption:");
+            Console.WriteLine ("==================== ");
+
             for (int i = 0; i < buildArray.Length; i++)
             {
-                Console.WriteLine("Encryption :" + encryption.VCTable()[arrKey[i],arrText[i]]);
+                Console.Write(encryption.VCTable()[arrKey[i],arrText[i]]);
             }
+
+            Console.WriteLine("\n====================");
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nDecryption:");
+            Console.WriteLine("==================== ");
+
+            for (int i = 0; i < buildArray.Length; i++)
+            {
+                Console.Write(encryption.VCTable()[arrText[i], 0]);
+            }
+
+            Console.WriteLine("\n====================");
 
 
             #region test code 
+            //Console.WriteLine("The numbers for the encryption:");
+            //Console.WriteLine ("==================== ");
+            //Console.Write("Text) ");
+            //foreach (var item in text)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+            //Console.Write("\nKey) ");
+            //foreach (var item in key)
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine("\n====================");
+
+
+
 
             //foreach (int itemRow in key)
             //{
